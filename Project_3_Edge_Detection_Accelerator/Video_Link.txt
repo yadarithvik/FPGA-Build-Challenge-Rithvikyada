@@ -1,0 +1,8 @@
+V-SPACE FPGA Build Challenge 2026 | Demonstration Video
+Team: TEAM BVD-26
+Project 3: PYNQ-Based Real-Time Edge Detection Accelerator — Hardware vs. Software Speed Benchmark
+Board: AMD PYNQ-Z2 (XC7Z020-1CLG400C)
+
+VIDEO DEMO URL:
+https://drive.google.com/file/d/1ETwpIhU-sMeKRey0PmC7T58xH3pqK337/view?usp=sharing
+

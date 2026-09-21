@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Sep 12 15:30:00 2026" VIVADOVERSION="2024.1">
+  <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="sobel_pynq_design" PACKAGE="clg400" SPEEDGRADE="-1"/>
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0"/>
+    <PORT DIR="I" NAME="rst_n" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn"/>
+    <PORT DIR="O" LEFT="3" NAME="status_leds" RIGHT="0" SIGIS="undef"/>
+  </EXTERNALPORTS>
+  <MODULES>
+    <MODULE COREREVISION="1" FULLPATH="/processing_system7_0" HWVERSION="5.5" INSTANCE="processing_system7_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="processing_system7" VLNV="xilinx.com:ip:processing_system7:5.5">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_EN_EMIO_GPIO" VALUE="0"/>
+        <PARAMETER NAME="C_USE_M_AXI_GP0" VALUE="1"/>
+        <PARAMETER NAME="C_USE_S_AXI_HP0" VALUE="1"/>
+      </PARAMETERS>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLPATH="/axi_dma" HWVERSION="7.1" INSTANCE="axi_dma" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_dma" VLNV="xilinx.com:ip:axi_dma:7.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_BASEADDR" VALUE="0x40400000"/>
+        <PARAMETER NAME="C_HIGHADDR" VALUE="0x4040FFFF"/>
+        <PARAMETER NAME="C_INCLUDE_SG" VALUE="0"/>
+        <PARAMETER NAME="C_SG_INCLUDE_STSCNTRL_STRM" VALUE="0"/>
+      </PARAMETERS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="axi_dma_M_AXIS_MM2S" NAME="M_AXIS_MM2S" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0"/>
+        <BUSINTERFACE BUSNAME="sobel_accel_0_m_axis" NAME="S_AXIS_S2MM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0"/>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLPATH="/sobel_accel_0" HWVERSION="1.0" INSTANCE="sobel_accel_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="sobel_edge_detect" VLNV="xilinx.com:user:sobel_edge_detect:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="IMG_WIDTH" VALUE="640"/>
+        <PARAMETER NAME="IMG_HEIGHT" VALUE="480"/>
+        <PARAMETER NAME="DATA_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="C_BASEADDR" VALUE="0x43C00000"/>
+        <PARAMETER NAME="C_HIGHADDR" VALUE="0x43C0FFFF"/>
+      </PARAMETERS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="axi_dma_M_AXIS_MM2S" NAME="s_axis" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0"/>
+        <BUSINTERFACE BUSNAME="sobel_accel_0_m_axis" NAME="m_axis" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0"/>
+      </BUSINTERFACES>
+    </MODULE>
+  </MODULES>
+  <ADDRESSMAP>
+    <MEMORY MAP="axi_dma" MEMTYPE="REGISTER" RANGE="64K" START="0x40400000"/>
+    <MEMORY MAP="sobel_accel_0" MEMTYPE="REGISTER" RANGE="64K" START="0x43C00000"/>
+  </ADDRESSMAP>
+</EDKSYSTEM>
