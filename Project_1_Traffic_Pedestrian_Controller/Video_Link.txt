@@ -1,0 +1,8 @@
+================================================================================
+V-SPACE FPGA BUILD CHALLENGE 2026 - DEMONSTRATION VIDEO SUBMISSION
+Experiment 1: Digital Traffic & Pedestrian Signal Controller using FSM (AMD PYNQ-Z2)
+================================================================================
+
+[GOOGLE DRIVE VIDEO LINK]
+https://drive.google.com/file/d/1kAtR0T0bN5Pql7zLxMloAPpcrfc-NvV0/view?usp=sharing
+

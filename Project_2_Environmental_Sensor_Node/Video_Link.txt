@@ -1,0 +1,8 @@
+V-SPACE FPGA Build Challenge 2026 | Demonstration Video
+Team: TEAM BVD-26
+Project 2: GPIO-Based Environmental Sensor Node with Real-Time Threshold Alerts
+Board: AMD PYNQ-Z2 (XC7Z020-1CLG400C)
+
+VIDEO DEMO URL:
+https://drive.google.com/file/d/1A-rkX9lzsCKstHDV_A-b5ZIfy4zyeVR1/view?usp=sharing
+
