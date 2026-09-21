@@ -1,0 +1,9 @@
+V-SPACE FPGA Build Challenge 2026 | Demonstration Video
+Team: TEAM BVD-26
+Project 4: FPGA-Accelerated Real-Time ECG Signal Anomaly Detection System
+Board: AMD PYNQ-Z2 (XC7Z020-1CLG400C)
+
+VIDEO DEMO URL:
+https://drive.google.com/file/d/1pUKGOf-Sa0OV8mOfgjhWPMjW9bHXOGPO/view?usp=sharing
+
+
